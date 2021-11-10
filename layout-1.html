@@ -8,7 +8,7 @@
 
     <style>
       .container {
-          width: 500px;
+        width: 500px;
         display: inline-grid;
         display: -moz-inline-grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -32,43 +32,55 @@
         grid-template-areas: 1/2/3;
 
         justify-content: start;
-        
       }
 
-      .flex-container{
-          display: flex;
-          border: solid 2px black;
-          height: 500px;
-          width: 500px;
-          align-content: start;
+      .flex-container {
+        display: flex;
+        border: solid 2px black;
+        height: 500px;
+        width: 500px;
+        align-content: center;
+        align-items: baseline;
 
-          flex-wrap: wrap;
-
+        /* flex-wrap: wrap; */
       }
 
-      .flex-items{
+      .flex-items {
         border: solid 2px red;
-        height: 100px;
-        width: 100px;
+        height: 200px;
+        width: 200px;
+      }
+
+      .flex-items:first-child {
+        order: 8;
+      }
+
+      .flex-items:nth-child(2) {
+        font-size: 50px;
+        order: 4;
+      }
+
+      .flex-items:nth-child(3) {
+        font-size: 70px;
+        order: 2;
+      }
+
+      .flex-items:nth-child(4) {
+        font-size: 30px;
       }
     </style>
   </head>
   <body>
-
     <div class="flex-container">
+      <div class="flex-items">One</div>
+      <div class="flex-items">Two</div>
+      <div class="flex-items">Three</div>
+      <div class="flex-items">Four</div>
 
-        <div class="flex-items">One</div>
-        <div class="flex-items">Two</div>
-        <div class="flex-items">Three</div>
-        <div class="flex-items">Four</div>
-
-
-        <div class="flex-items">One</div>
-        <div class="flex-items">Two</div>
-        <div class="flex-items">Three</div>
-        <div class="flex-items">Four</div>
-
-
+      <div class="flex-items">One</div>
+      <div class="flex-items">Two</div>
+      <div class="flex-items">Three</div>
+      <div class="flex-items">Four</div>
     </div>
     <!-- <div class="container">
       <div class="grid-items first">
