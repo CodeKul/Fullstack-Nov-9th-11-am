@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+            clip-path: inset(50px 50px);
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/3.jpg" alt="">
+
+    <!-- <video controls >
+        <source src="../How to Create a Healthy Plate.mp4"/>
+        <source src="../How to Create a Healthy Plate.mp4"/>
+        <source src="../How to Create a Healthy Plate.mp4"/>
+        <source src="../How to Create a Healthy Plate.mp4"/>
+    </video> -->
+
+    <picture>
+        <source srcset="../images/5.jpg" media="(max-width: 400px)" type="image/jpg"/>
+        <source srcset="../images/4.jpg" media="(max-width: 600px)"/>
+        <!-- <source src="../How to Create a Healthy Plate.mp4"/>
+        <source src="../How to Create a Healthy Plate.mp4"/> -->
+
+        <img src="../images/3.jpg" alt="">
+    </picture>
+</body>
+</html>

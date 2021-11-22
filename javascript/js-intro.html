@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javascript Basics</h1>
+
+    <script>
+      // alert("Welcome to Javascript")
+
+      // var, let and const
+
+      //declaration
+
+      // number1=10;     //initialization
+
+      // console.log(number1);
+
+      // scopes - global scope, block scopes, function scope
+
+      // var keyword variable are global scope and function scope variable
+
+      // let keyword variable are block scope and function scope variable
+
+
+      const PI=3.14;
+
+
+      //Hoisting - we can access the variable before the declaration
+
+      // Go through this article - https://blog.bitsrc.io/hoisting-in-modern-javascript-let-const-and-var-b290405adfda
+
+      // Go through this videos 
+      // https://www.youtube.com/watch?v=Fnlnw8uY6jo
+      // https://www.youtube.com/watch?v=BNC6slYCj50 
+
+      names="Codekul"
+     
+     console.log(names)
+      
+    var names;
+     
+   
+
+
+      if (true) {
+        var number1=15;;
+        number1 = 10;
+        number1=45;
+        console.log("number:" + number1)
+      }
+
+      function show() {
+        var number2
+        number2 = 20;
+        console.log(number2)
+        console.log(PI)
+      }
+
+      show();
+
+      console.log(typeof number1);
+
+      //   datatypes in javascript
+      //   string, number, boolean, array and object
+
+      
+
+      
+    </script>
+  </body>
+</html>
