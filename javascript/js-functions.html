@@ -12,13 +12,47 @@
       // arithmatic operators
       // relational operators
       // logical operators
-      // ternay operator
+      // ternary operator
 
-
-    //   functions parameters and arguments
+      //   functions parameters and arguments
 
       var num1 = 511;
       let num2 = 2;
+
+      // increment, decrement operators - (post increment/decrement and pre increment/decrement)
+      console.log(num1)
+      console.log(++num1)
+      console.log(num1)
+
+      num1 = num1+num2
+      num1+=num2
+      num1 /= num2   //assignment operator
+      console.log(num1)
+
+
+      console.log(num1<num2)
+      console.log(num2 === "2")  //strict equality operator
+      console.log(num2!=2)  //not equal to
+
+      console.log(num2<=1) //less than equal to, greater than equal to
+
+if (num2=="2") {
+  console.log(true && false)
+} else {
+  console.log(true)
+}
+
+
+let percentage =50;
+
+if(percentage<35){
+console.log("Failed")
+} else if((percentage>=50) && (percentage<=60)){
+console.log("Pass Class")
+} else if((percentage>=60) && (percentage<=75)){
+console.log("First Class")
+} 
+
 
       function addNumbers() {
         let add = num1 + num2;
@@ -33,7 +67,7 @@
       }
 
       function division() {
-        let div = num1 % num2;
+        let div = num1 % num2; // % symbol is used to calculate the remainder output  and / symbol for division
 
         console.log("The division is : " + div);
       }
@@ -42,7 +76,20 @@
 
       substraction();
 
-      division()
+      division();
+
+
+      var show = function (){
+        console.log("Hii, welcome to javascript world")
+        return true
+        console.log("hello function")
+      }
+
+      show()
+      console.log(show())
+
+
+   
     </script>
   </body>
 </html>
