@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Create Dynamic Element</h1>
+
+    <button onclick="addParagraph()">Create Paragraph</button>
+
+    <script>
+
+        // create a dynamic form 
+        // input fields should be of different type
+      let body = document.body;
+      const addParagraph = () => {
+        let paragrapgh = document.createElement("p");
+
+        // Syntax parentNode.appendChild(childNode)
+        body.append(paragrapgh);
+ 
+        let content = "Codekul"
+        paragrapgh.append(content)
+
+        // appendChild method is used for appending element node 
+        // append method is used for appending element node as well as String or text
+        
+
+
+      };
+    </script>
+  </body>
+</html>
