@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="input" onfocus=""  onkeydown=""  type="text">
+
+    <input type="button" onclick="createForm()" value="submit">
+
+
+    <script>
+        // function validate(){
+        //     let inputData = document.getElementById("input").value
+        //     console.log(inputData)
+        //     if(inputData){
+        //         alert("Enter the data")
+        //     }
+
+        // }
+
+        // https://developer.mozilla.org/en-US/docs/Web/API/Event
+
+// create dynamic form on a click of button
+
+        let inputData = document.getElementById("input")
+        inputData.addEventListener("keyup", ()=>{
+            console.log(inputData)
+            if(inputData){
+                alert("Enter the data")
+            }
+        })
+
+        inputData.addEventListener("keyup", ()=>{
+            console.log("2nd listener")
+        })
+           
+
+        function createForm(){
+            
+            let form = document.createElement("form")
+            let textField = document.createElement("input")
+            console.log(textField)
+        }
+
+        
+    </script>
+</body>
+</html>
