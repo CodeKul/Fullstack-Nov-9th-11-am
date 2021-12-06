@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <input id="input" onfocus=""  onkeydown=""  type="text">
+    <input  onfocus=""  onkeydown=""  type="text">
 
     <input type="button" onclick="createForm()" value="submit">
 
@@ -27,6 +27,11 @@
 
 // create dynamic form on a click of button
 
+// event propagation and event loupe
+
+let inputElement = document.querySelectorAll("input")
+console.log(inputElement)
+
         let inputData = document.getElementById("input")
         inputData.addEventListener("keyup", ()=>{
             console.log(inputData)
@@ -34,6 +39,25 @@
                 alert("Enter the data")
             }
         })
+
+
+        function success(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+
+  let 
+}
+
+        // window.alert()
+        navigator.geolocation.getCurrentPosition(success)
+
+        let crd = pos.coords;
+        console.log(crd.latitude)
+
 
         inputData.addEventListener("keyup", ()=>{
             console.log("2nd listener")
