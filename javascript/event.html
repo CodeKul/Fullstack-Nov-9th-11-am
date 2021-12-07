@@ -1,77 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-    <input  onfocus=""  onkeydown=""  type="text">
+  </head>
+  <body>
+    <p id="para">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+      nobis rerum in cum, nulla numquam eaque assumenda. Voluptate quae dolore
+      eum amet vel eveniet, ad aut nobis esse magnam fuga.
+    </p>
 
-    <input type="button" onclick="createForm()" value="submit">
+    <button>Remove paragragh</button>
 
+    <input onfocus="" onkeydown="" type="text" />
+
+    <input type="button" onclick="createForm()" value="submit" />
 
     <script>
-        // function validate(){
-        //     let inputData = document.getElementById("input").value
-        //     console.log(inputData)
-        //     if(inputData){
-        //         alert("Enter the data")
-        //     }
 
-        // }
+      let body =  document.body;
 
-        // https://developer.mozilla.org/en-US/docs/Web/API/Event
+        let btn = document.querySelector("button")
+        let paragragh = document.getElementById("para")
 
-// create dynamic form on a click of button
-
-// event propagation and event loupe
-
-let inputElement = document.querySelectorAll("input")
-console.log(inputElement)
-
-        let inputData = document.getElementById("input")
-        inputData.addEventListener("keyup", ()=>{
-            console.log(inputData)
-            if(inputData){
-                alert("Enter the data")
-            }
+        btn.addEventListener("click", ()=>{
+            // body.removeChild(paragragh)
+            paragragh.remove()
         })
 
+      // function validate(){
+      //     let inputData = document.getElementById("input").value
+      //     console.log(inputData)
+      //     if(inputData){
+      //         alert("Enter the data")
+      //     }
 
-        function success(pos) {
-  var crd = pos.coords;
+      // }
 
-  console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
+      // https://developer.mozilla.org/en-US/docs/Web/API/Event
 
-  let 
-}
+      // create dynamic form on a click of button
 
-        // window.alert()
-        navigator.geolocation.getCurrentPosition(success)
+      //
 
-        let crd = pos.coords;
-        console.log(crd.latitude)
+      let inputElement = document.querySelectorAll("input");
+      console.log(inputElement);
 
-
-        inputData.addEventListener("keyup", ()=>{
-            console.log("2nd listener")
-        })
-           
-
-        function createForm(){
-            
-            let form = document.createElement("form")
-            let textField = document.createElement("input")
-            console.log(textField)
+      let inputData = document.getElementById("input");
+      inputData.addEventListener("keyup", () => {
+        console.log(inputData);
+        if (inputData) {
+          alert("Enter the data");
         }
+      });
 
-        
+      function success(pos) {
+        var crd = pos.coords;
+
+        console.log("Your current position is:");
+        console.log(`Latitude : ${crd.latitude}`);
+        console.log(`Longitude: ${crd.longitude}`);
+        console.log(`More or less ${crd.accuracy} meters.`);
+
+        let;
+      }
+
+      // window.alert()
+      navigator.geolocation.getCurrentPosition(success);
+
+      let crd = pos.coords;
+      console.log(crd.latitude);
+
+      inputData.addEventListener("keyup", () => {
+        console.log("2nd listener");
+      });
+
+      function createForm() {
+        let form = document.createElement("form");
+        let textField = document.createElement("input");
+        console.log(textField);
+      }
     </script>
-</body>
+  </body>
 </html>
