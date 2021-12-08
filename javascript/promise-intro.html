@@ -10,14 +10,19 @@
     <script>
       // https://www.youtube.com/watch?v=JRNToFh3hxU
       // promise creation
+
+      // promise chaining
       let promise = new Promise((resolve, reject) => {
-        resolve("RequestResolved");
+        // resolve("RequestResolved");
+        reject("Request rejected")
       });
 
       console.log(promise);
 
-      promise.then(() => {
-        resolve("Promise Fulfilled");
+      promise.catch(() => {
+        // resolve("Promise Fulfilled");
+        console.log("Request Fulfilled")
+        
       });
     </script>
   </body>
