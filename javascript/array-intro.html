@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="data" type="text" />
+
+    <button onclick="addData()">Submit</button>
+    <script>
+      // create an array of objects. 10 objects
+      // object data -> productname, rating, price and discount
+      // create a form to add new product details and add that to existring array
+      let cities = ["pune", "mumbai", "delhi", "pune", "banglore"];
+
+      let products = [
+        {
+          productName: "iPhone",
+          rating: 5,
+          price: 800000,
+          discount: 20,
+        },
+
+        {
+          productName: "Samsung",
+          rating: 5,
+          price: 600000,
+          discount: 10,
+        },
+
+        {
+          productName: "Blackberry",
+          rating: 5,
+          price: 900000,
+          discount: 25,
+        },
+
+        {
+          productName: "Nokia",
+          rating: 5,
+          price: 900000,
+          discount: 25,
+        },
+
+        {
+          productName: "LG",
+          rating: 5,
+          price: 500000,
+          discount: 25,
+        },
+      ];
+
+      console.log(products);
+
+     let filteredProducts = products.filter(item=>item.price == 500000 )
+      
+     console.log(filteredProducts)
+     console.log(cities);
+
+      let x = cities.find((item) => item == "pune");
+      let filteredData = cities.filter((item) => item == "pune");
+
+      console.log(x);
+      console.log(filteredData);
+      console.log(cities.pop());
+
+      console.log(cities);
+
+      const addData = () => {
+        let city = document.getElementById("data").value;
+        cities.push(city);
+        console.log(cities);
+      };
+
+      console.log(cities[2]);
+    </script>
+  </body>
+</html>
