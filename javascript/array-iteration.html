@@ -15,8 +15,17 @@
       // for in loop
 
       // using standard for loop iterate over an array
-      // what is the difference between array.map and array.forEach 
+      // what is the difference between array.map and array.forEach
       // why do we use only array.map for rendering ui
+
+      // create a application using api's
+      // google books api,
+      // recipie search api,
+      // weather api,
+      // movie database
+      // learn to create api in nodejs and java
+      //create a basic crud application
+
       for (let i = 0; i <= 5; i++) {
         console.log(i + 5);
       }
@@ -27,17 +36,36 @@
         console.log(numbers[j]);
       }
 
+      numbers.map((item) => {
+        console.log(item);
+      });
 
-      numbers.map((item)=>{
-          console.log(item)
-      })
+      numbers.forEach((item) => {
+        console.log(item);
+      });
 
-      numbers.forEach((item)=>{
-          console.log(item)
-      })
+      for (let item of numbers) {
+        console.log(item);
+      }
 
-      for (let item of numbers){
-          console.log(item)
+      let user = {
+        fullName: "Sanket Bhosale",
+        city: "Pune",
+        designation: "SWE",
+      };
+
+      let users = [
+        { name: "Sanket", city: "Pune" },
+        { name: "Swapnil", city: "Mumbai" },
+        { name: "Pratik", city: "Banglore" },
+      ];
+
+      for (let item of users) {
+        console.log();
+      }
+
+      for (let item in user) {
+        console.log(`${item}: ${user[item]}`);
       }
     </script>
   </body>
