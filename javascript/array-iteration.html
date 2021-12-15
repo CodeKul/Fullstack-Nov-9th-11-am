@@ -7,6 +7,9 @@
     <title>Document</title>
   </head>
   <body>
+
+    <input max="200" step="5" size="" min="0" type="range" name="" id="range">
+    <input type="number" step="5" name="" id="">
     <script>
       // for loop
       // array.map method
@@ -25,6 +28,11 @@
       // movie database
       // learn to create api in nodejs and java
       //create a basic crud application
+
+
+let rangleValue = document.getElementById("range").value
+console.log(rangleValue)
+
 
       for (let i = 0; i <= 5; i++) {
         console.log(i + 5);
@@ -67,6 +75,17 @@
       for (let item in user) {
         console.log(`${item}: ${user[item]}`);
       }
+
+      let promiseObject = new Promise((resolve, reject) => {
+        resolve("Promise is resolved");
+      });
+
+
+      promiseObject.then(()=>{
+       console.log("Request ")
+      })
+
+      console.log(promiseObject);
     </script>
   </body>
 </html>

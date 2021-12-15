@@ -7,24 +7,40 @@
     <title>Document</title>
   </head>
   <body>
-
-    <div id="result" class="result">
-
-    </div>
-
+    <div id="result" class="result"></div>
 
     <script>
       let numbers = [0, 2, 6, 5, 11, 25];
+      console.log(numbers.sort(ascending));
 
-     console.log(numbers.join('-'))
+      function ascending(a, b) {
+        return b-a;
+      }
+
+      let numbers2 = ["Sanket", "Aniket", "Sagar", "Pavan", "Manish"];
+      //console.log(numbers2.sort());
+      console.log(numbers2.splice(1, 3, "Pune", "Mumbai"))
+      console.log(numbers2)
+
+      console.log(numbers.join("-"));
 
       console.log(numbers);
 
       numbers.map((item) => {
         console.log(item + 5);
-
-
       });
+
+      let set1 = numbers2.slice(1,3)
+      console.log(set1)
+
+      // array.shift to remove first element from array 
+      // array.unshift to add elements from 0th index
+
+      // create snake ladder board using js 
+
+
+
+
     </script>
   </body>
 </html>
