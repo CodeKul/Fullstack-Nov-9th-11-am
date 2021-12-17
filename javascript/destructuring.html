@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(a,c, ...b){
+            // let a = 20;
+            // let b = 30;
+            console.log("a",a);
+            console.log("b",b);
+            console.log("c", c)
+            console.log("addition", a+b);
+            console.log(...b)
+
+        }
+
+        let cities =["pune", "mumbai", "delhi", "banglore", "Jaipur"]
+
+        console.log(...cities)
+
+       
+        add(50,100,200,500,600)
+
+        let user = {
+            fname: "Sanket B",
+            city: "Pune",
+            designation: "SWE"
+        }
+
+        console.log({...user})
+        
+    </script>
+</body>
+</html>
