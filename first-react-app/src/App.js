@@ -3,6 +3,9 @@ import './App.css';
 //import "./Function.css"
 import Home from './components/ClassComponent';
 import FunctionComponent from './components/FunctionComponent';
+import ClassCounter from './components/ClassCounter';
+import FunctionCounter from './components/FunctionCounter';
+import HelloMessage from './components/HelloMessage';
 
 
 // https://beta.reactjs.org/learn
@@ -13,8 +16,15 @@ import FunctionComponent from './components/FunctionComponent';
 function App() {
   return (
     <div className="App">
-      <Home/>
-      <FunctionComponent/>
+      {/* <Home/>
+      <FunctionComponent/> */}
+
+      {/* <ClassCounter/> */}
+      {/* <FunctionCounter/> */}
+
+      <HelloMessage name="Sanket"/>
+
+      <HelloMessage name="Yash"/>
          </div>
   );
 }
