@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export function Form() {
+export default function Form() {
 
     const  [name, setName]= useState("")
     const [email, setEmail]= useState("")
@@ -10,6 +10,18 @@ export function Form() {
         setName(e.target.value)
         console.log(name)
     }
+
+
+    const handleEmail = (e)=>{
+        setEmail(e.target.value)
+        console.log(email)
+    }
+
+
+    const handlePassword = (e)=>{
+        setPassword(e.target.value)
+        console.log(password)
+    }
     
     return (
         <div>
@@ -18,10 +30,10 @@ export function Form() {
             <input name="name"  onChange={handleName} type="text" /> <br />
 
             <label htmlFor="">Email</label>
-            <input type="email" /> <br />
+            <input onChange={handleEmail} type="email" /> <br />
 
             <label htmlFor="">Password</label>
-            <input type="password" /> <br />
+            <input onChange={handlePassword} type="password" /> <br />
 
 
             <button>Submit</button>
