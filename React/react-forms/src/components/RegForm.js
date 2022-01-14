@@ -6,18 +6,20 @@ export default function RegForm() {
         fullname: "",
         email: "",
         password: "",
-        gender: ""
+        gender: "",
+        technology: "",
+        isActive: false
     })
 
     const [data, setData] = useState({})
 
     const handleInput = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value })
+        setFormData({ ...formData, [e.target.name]: e.target.type === "checkbox" ? e.target.checked : e.target.value })
     }
 
     const handleSubmit = (e) => {
-        
-        setData({...formData})
+
+        setData({ ...formData })
         console.log(data)
     }
 
@@ -36,7 +38,7 @@ export default function RegForm() {
 
                 <br />
                 <label htmlFor="">Password</label>
-                <input value={formData.password} name='passwords' onChange={handleInput} type="password" id="" />
+                <input value={formData.password} name='password' onChange={handleInput} type="password" id="" />
 
                 <br />
 
@@ -45,10 +47,33 @@ export default function RegForm() {
                 <label htmlFor="">Male</label>
 
                 <input onChange={handleInput} checked={formData.gender === "female"} value="female" type="radio" name="gender" id="" />
-                <label htmlFor="">Female</label>
+                <label htmlFor="">Female</label> <br />
+
+
+                <label htmlFor="">Technology</label>
+                <select name="technology" onChange={handleInput} value={formData.technology} id="">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                    <option value="JAVA">JAVA</option>
+                    <option value="SPRING">SPRING</option>
+                    <option value="DATABASE">DATABASE</option>
+                </select>
                 <button onClick={handleSubmit} type='button'>Submit</button>
             </form>
 
+
+            {/* <label htmlFor="">Languages</label>
+            <input type="checkbox" name="" id="" />
+            <label htmlFor="">English</label>
+            <input type="checkbox" name="" id="" />
+            <label htmlFor="">Hindi</label>
+            <input type="checkbox" name="" id="" />
+            <label htmlFor="">Marathi</label> */}
+
+
+            <label htmlFor="">Are you active ?</label>
+            <input type="checkbox" onChange={handleInput} checked={formData.isActive} value={true} name="isActive" id="" />
 
 
             <p>Full Name : {data.fullname} </p>

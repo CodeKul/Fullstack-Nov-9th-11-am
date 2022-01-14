@@ -35,7 +35,11 @@ function App() {
 
       {/* <CounterEx/> */}
 
-      <CounterFunction/>
+      <HelloMessage name="Sanket"/>
+
+      <HelloMessage name="Madhav"/>
+
+      {/* <CounterFunction/> */}
 
     </div>
   );
