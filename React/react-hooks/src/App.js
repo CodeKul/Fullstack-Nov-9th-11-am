@@ -5,6 +5,7 @@ import Effectapi from './components/useeffect/Effectapi';
 import Input from './components/useref/Input';
 import DataContext from './components/usecontext/DataContext';
 import Dashboard from './components/usecontext/Dashboard';
+import ReducerCounter from './components/usereducer/ReducerCounter';
 
 
 // https://blog.logrocket.com/react-context-api-deep-dive-examples/
@@ -19,9 +20,11 @@ function App() {
 
      {/* <Input/> */}
 
-     <DataContext>
+     {/* <DataContext>
        {<Dashboard/>}
-     </DataContext>
+     </DataContext> */}
+
+     <ReducerCounter/>
     </div>
   );
 }

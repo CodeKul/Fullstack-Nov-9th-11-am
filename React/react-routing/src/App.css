@@ -13,6 +13,19 @@
   }
 }
 
+ul{
+  padding: 10px;
+}
+
+nav{
+  background-color: turquoise;
+}
+
+li{
+  display: inline;
+  margin-left: 10px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

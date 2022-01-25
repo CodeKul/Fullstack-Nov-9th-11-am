@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import apicalls from '../services/apicalls';
+import api from '../services/apicalls';
 
 
 export default function UsersInfo() {
@@ -10,20 +10,20 @@ let data = {
 }
 
 useEffect(() => {
- let xyz = apicalls.get("/users")
+ let xyz = api.get("/users")
  .then((response)=>{
 console.log(response.data)
  })
 
- apicalls.get("/comments")
+ api.get("/comments")
  .then((response)=>{
     console.log(response.data)
      })
 
-     apicalls.post("/users", data)
+     api.post("/users", data)
 
 
-     apicalls.get("/photos")
+     api.get("/photos")
      .then((response)=>{
         console.log(response.data)
          })
