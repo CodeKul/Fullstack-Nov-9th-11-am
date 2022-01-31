@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import { useState } from 'react/cjs/react.production.min';
 import { countReducer } from './reducers/countReducer';
 
 
@@ -8,6 +9,8 @@ import { countReducer } from './reducers/countReducer';
 
 export default function ReducerCounter() {
 
+
+   // const [count, setCount] = useState()
     const [count, sendAction] = useReducer(countReducer, {
         count: 0,
         incBy: 1

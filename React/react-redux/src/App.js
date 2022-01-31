@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+//import { Home } from './components/Home';
+import {num1} from './components/Home.js';
 
 
 // https://www.eternussolutions.com/2020/12/21/redux-thunk-redux-saga/
@@ -13,7 +15,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      
+      {console.log(num1)}
     </div>
   );
 }

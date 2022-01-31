@@ -7,7 +7,7 @@ import { createStore } from 'redux';
 import { rootReducer } from './components/reducers/combineReducers';
 import { Provider } from 'react-redux';
 
-const bankStore = createStore(rootReducer)
+export const bankStore = createStore(rootReducer)
 
 ReactDOM.render(
   <Provider store={bankStore}>
