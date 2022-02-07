@@ -16,6 +16,7 @@ export default function ReducerCounter() {
         incBy: 1
     })
 
+   // const [count, setCount] = useState()
     console.log(count)
 
     return <div>
